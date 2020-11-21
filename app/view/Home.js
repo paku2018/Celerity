@@ -22,7 +22,7 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <ImageBackground source={require('../assets/img/home_bg.png')} style={styles.image} />
+        <ImageBackground source={require('../assets/img/home_bg.jpg')} style={styles.image} />
       </View>
     );
   }

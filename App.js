@@ -10,6 +10,7 @@ import CategoryClubScreen from './app/view/club/category';
 import SolicitaScreen from './app/view/SolicitaTuPlan';
 import ServicioScreen from './app/view/ServicioTecnico';
 import ATCScreen from './app/view/ATC';
+import LinkPageScreen from './app/view/util/linkPage';
 
 const Stack = createStackNavigator();
 
@@ -21,38 +22,15 @@ class App extends React.Component {
         screenOptions={{
           headerShown: false
         }}>
-          <Stack.Screen
-            name="Home"
-            component={HomeScreen}
-          />
-          <Stack.Screen
-            name="MainMenu"
-            component={MainMenuScreen}
-          />
-          <Stack.Screen
-            name="Pagos"
-            component={PagosScreen}
-          />
-          <Stack.Screen
-            name="ClubMain"
-            component={MainClubScreen}
-          />
-          <Stack.Screen
-            name="ClubCategory"
-            component={CategoryClubScreen}
-          />
-          <Stack.Screen
-            name="Solicita"
-            component={SolicitaScreen}
-          />
-          <Stack.Screen
-            name="Servicio"
-            component={ServicioScreen}
-          />
-          <Stack.Screen
-            name="ATC"
-            component={ATCScreen}
-          />
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="MainMenu" component={MainMenuScreen} />
+          <Stack.Screen name="Pagos" component={PagosScreen} />
+          <Stack.Screen name="ClubMain" component={MainClubScreen} />
+          <Stack.Screen name="ClubCategory" component={CategoryClubScreen} />
+          <Stack.Screen name="Solicita" component={SolicitaScreen} />
+          <Stack.Screen name="Servicio" component={ServicioScreen} />          
+          <Stack.Screen name="ATC" component={ATCScreen} />
+          <Stack.Screen name="LinkPage" component={LinkPageScreen} />
         </Stack.Navigator>          
       </NavigationContainer>
     );

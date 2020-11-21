@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 import * as React from "react";
 import { ImageBackground, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from "react-native";
 import { width, height, totalSize } from "react-native-dimension";
-import { Ionicons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 import Header from './util/header';
 import Footer from './util/footer_1';
 
@@ -50,16 +50,30 @@ class PagosScreen extends React.Component {
     return (
       <View style={styles.container}>
         <ImageBackground source={require('../assets/img/pagos/background.png')} style={styles.image}>
-            <Header
+        <Header
                 image={false}
                 imageSource={{}}
                 left={
-                  <TouchableOpacity onPress={ () => this.props.navigation.goBack(null) }>
-                      <Image source={require('../assets/img/back.png')} />
-                  </TouchableOpacity>
+                <TouchableOpacity onPress={ () => this.props.navigation.goBack(null) }>
+                    <View style={{
+                        flexDirection: 'row'
+                    }}>
+                        <AntDesign name="left" color={'black'} size={20}></AntDesign>
+                        <Text style={{fontSize: width(4), width: width(13), color: 'lightgray'}}>Volver</Text>
+                    </View>
+                </TouchableOpacity>
                 }
-                center={<Text style={{fontSize: width(5)}}>Pagos</Text>}
-                right={<Image source={require('../assets/img/back.png')} />}
+                center={
+                <View style={{height: height(10), flexDirection: 'column', marginTop: height(5)}}>
+                    <Text style={{fontSize: width(5), alignSelf: 'center', marginBottom: height(2)}}>ATC </Text>
+                </View>}
+                right={<View style={{
+                            flexDirection: 'row',
+                            opacity: 0
+                        }}>
+                    <AntDesign name="left" color={'black'} size={20}></AntDesign>
+                    <Text style={{fontSize: width(4), width: width(13),}}>Volver</Text>
+                </View>}
             />
             <View style={styles.content}>
                 <Text style={{fontSize: width(8), alignSelf: 'center'}}>

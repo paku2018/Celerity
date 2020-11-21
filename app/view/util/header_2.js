@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
       top: 0,
       position: 'absolute',
       width: width(100),
-      height: height(18),
+      height: height(20),
       backgroundColor: '#f8f8f8',
       borderBottomWidth: 1,
       borderColor: '#f8f8f8',
@@ -63,7 +63,8 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
     },
     right: {
-        opacity: 0
+        opacity: 0,
+        // width: width(40)
     },
   });
 
