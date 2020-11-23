@@ -11,14 +11,12 @@ class LinkPageScreen extends React.Component {
         };
         var linkURL = this.state.url;
         return (
-            // <View>
-            //     <Text style={{fontSize: 100,}}>{linkURL}</Text>
-            // </View>
             <WebView
                 source={{uri: linkURL}}
-                style={{
-                    marginTop: 20
-                }}
+                // style={{
+                //     marginTop: 20
+                // }}
+                
             />
         )
     }

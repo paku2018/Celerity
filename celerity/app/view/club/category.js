@@ -1,10 +1,10 @@
 import 'react-native-gesture-handler';
 import * as React from "react";
-import { ImageBackground, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from "react-native";
+import { ImageBackground, StyleSheet, Text, View, Image, ScrollView, TouchableOpacity } from "react-native";
 import { width, height, totalSize } from "react-native-dimension";
 import { AntDesign } from '@expo/vector-icons';
-import Header from './util/header_2';
-import Footer from './util/footer_1';
+import Header from '../util/header_2';
+import Footer from '../util/footer_1';
 
 const styles = StyleSheet.create({
     container: {
@@ -17,55 +17,62 @@ const styles = StyleSheet.create({
     },
     content: {
         height: height(80), 
-        marginTop: height(25),
+        marginTop: height(20),
         flexDirection: "column",
+        paddingTop: height(5),
       //   justifyContent: "center"
     },
     btn: {
         width: width(80),
-        height: height(7),
+        height: height(7.3),
         alignSelf: 'center',
+        // backgroundColor: 'white',
     }
 });
 
 class LinkButton extends React.Component {
     render() {
         return (
-            <TouchableOpacity activeOpacity={.7} style={styles.btn} onPress={this.props.pageNavi}>
+            <TouchableOpacity activeOpacity={.7} style={styles.btn} onPress={this.props.changeView}>
                 <View
                     style={{
                         justifyContent: 'space-between',
                         flexDirection: 'row',
+                        borderColor: 'gray',
                         borderWidth: width(0.2),
                         height: height(6.5),
                         borderRadius: 10,
-                        paddingTop: height(0.8),
+                        alignItems: 'center',
+                        // paddingTop: height(0.8),
                         paddingRight: width(0.5),
                         paddingLeft: width(2.5),
+                        backgroundColor: 'white',
+                        opacity: 0.5,
                     }}
                 >
                     {/* <AntDesign name="right" color={'transparent'} size={30}></AntDesign> */}
                     <Text
                         style={{ 
                             width: width(60),
-                            paddingTop: height(0.5)
+                            fontSize: width(4.3),
+                            // paddingTop: height(0.5)
                         }}
                     >
                         {this.props.text}
                     </Text>
-                    <AntDesign name="right" color={'green'} size={30}></AntDesign>
+                    <AntDesign name="right" color={'black'} size={30}></AntDesign>
                 </View>
             </TouchableOpacity>
         );
     }
 }
 
-class ATCScreen extends React.Component {
-render() {
-    return (
-    <View style={styles.container}>
-        <ImageBackground source={require('../assets/img/pagos/background_.png')} style={styles.image}>
-        <Header
+class CategoryClubScreen extends React.Component {
+    render() {
+        return (
+        <ScrollView style={styles.container}>
+            <ImageBackground source={require('../../assets/img/club/background.jpg')} style={styles.image}>
+            <Header
                 image={false}
                 imageSource={{}}
                 left={
@@ -80,9 +87,9 @@ render() {
                 }
                 center={
                 <View style={{height: height(10), flexDirection: 'column', marginTop: height(5)}}>
-                    <Text style={{fontSize: width(5), alignSelf: 'center', marginBottom: height(2)}}>ATC </Text>
+                    <Text style={{fontSize: width(5), alignSelf: 'center', marginBottom: height(2)}}>Club</Text>
                     <Image 
-                        source={require('../assets/img/club/logo_2.png')} 
+                        source={require('../../assets/img/club/logo_2.png')} 
                         style={{
                             width: width(50),
                             alignSelf: 'center',
@@ -99,23 +106,30 @@ render() {
                     <Text style={{fontSize: width(4), width: width(13),}}>Volver</Text>
                 </View>}
             />
-            <View style={styles.content}>
-                <LinkButton text="Gestiona tu cuenta" />
-                <LinkButton text="Solicita traslado" />
-                <LinkButton text="Aumenta velocidad" />
-                <LinkButton text="Contactanos" />
-                <LinkButton text="Revisa valores pendientes" />
-                <LinkButton text="Chat con asesor" />
-                <LinkButton text="Otros servicios" />
-            </View>
-            <Footer/>
-        </ImageBackground>
-    </View>
-    );
-}
+                <View style={styles.content}>
+                    <LinkButton text="Conoce nuestro club" 
+                        changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/clubcelerity/' })} 
+                    />
+                    <LinkButton text="Consulta tus puntos" 
+                        changeView={() => this.props.navigation.navigate('ClubLogin')} 
+                    />
+                    <LinkButton text="Revisa tu estado de cuenta" />
+                    <LinkButton text="Tarjeta virtual Celerity" />
+                    <LinkButton text="Canjea tus premios" />
+                    <LinkButton text="Accede a tus beneficios" />
+                    {/* <WebView 
+                        source={{html: '<iframe width="100%" height="50%" src="https://www.youtube.com/embed/cqyziA30whE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'}}
+                        style={{marginTop: 20}}
+                    /> */}
+                </View>
+                <Footer navigation={this.props.navigation} />
+            </ImageBackground>
+        </ScrollView>
+        );
+    }
 }
 
-export default ATCScreen;
+export default CategoryClubScreen;
 
 
 

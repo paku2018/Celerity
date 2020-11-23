@@ -1,7 +1,7 @@
 import * as React from "react";
+import 'react-native-gesture-handler';
 import { View, TouchableOpacity, StyleSheet, Text, Image } from "react-native";
 import { width, height, totalSize } from "react-native-dimension";
-
 
 class LinkButton extends React.Component {
     render() {
@@ -18,19 +18,24 @@ class LinkButton extends React.Component {
     }
 }
 
-
-export default class Footer extends React.Component {
+class Footer extends React.Component {
     render() {
         return(
             <View style={styles.container}>
                 <LinkButton 
                     url={require('../../assets/img/footer/ayuda.png')} 
                     text="Ayuda"
-                    // pageNavi={() => this.props.navigator.navigate('Put Page name from App.js Category')}
+                    pageNavi={() => this.props.navigation.navigate('Servicio') }
                 />
-                <LinkButton url={require('../../assets/img/footer/mi_club.png')} text="Mi club"/>
-                <LinkButton url={require('../../assets/img/footer/atencion.png')} text="Atencion"/>
-                <LinkButton url={require('../../assets/img/footer/mi_cuenta.png')} text="Mi cuenta"/>
+                <LinkButton url={require('../../assets/img/footer/mi_club.png')} text="Mi club"
+                    pageNavi={() => this.props.navigation.navigate("ClubMain") } 
+                    />
+                <LinkButton url={require('../../assets/img/footer/atencion.png')} text="Atencion"
+                    pageNavi={() => this.props.navigation.navigate("ATC") }
+                    />
+                <LinkButton url={require('../../assets/img/footer/mi_cuenta.png')} text="Mi cuenta"
+                    // pageNavi={() => this.props.navigation.navigate("") }
+                    />
             </View>
         );
     }
@@ -48,6 +53,10 @@ const styles = StyleSheet.create({
         paddingRight: width(8),
         paddingLeft: width(8),
         paddingTop: height(2),
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: -3 },
+        shadowOpacity: 0.5,
+        elevation: 10,
     },
     btnImg: {
         resizeMode: 'stretch',
@@ -57,3 +66,5 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
     }
 });
+
+export default Footer

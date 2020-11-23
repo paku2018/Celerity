@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     logoImg: {
         alignSelf: 'center',
         width: width(50),
-        height: height(8),
+        height: height(7),
         resizeMode: 'stretch',
     },
     buttons: {

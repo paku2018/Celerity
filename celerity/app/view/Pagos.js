@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
     width: width(80),
     borderWidth: width(0.2),
     borderRadius: 10,
-    borderColor: 'green',
+    fontSize: width(4.8),
+    borderColor: 'rgb(165, 198, 90)',
     alignSelf: 'center',
     backgroundColor: '#ffffff',
     paddingLeft: width(5),
@@ -78,7 +79,7 @@ class PagosScreen extends React.Component {
             <View style={styles.content}>
                 <Text style={{fontSize: width(8), alignSelf: 'center'}}>
                   Ingresa 
-                  <Text style={{color: 'green'}}> tu # de cédula</Text>
+                  <Text style={{color: 'rgb(165, 198, 90)', fontWeight: 'bold'}}> tu # de cédula</Text>
                 </Text>
                 <Text style={{fontSize: width(7.9), alignSelf: 'center', fontWeight: 'bold'}}>
                   y paga tu servicio en 
@@ -88,7 +89,7 @@ class PagosScreen extends React.Component {
                 </Text>
                 <TextInput
                     style={styles.inputbox}
-                    placeholder="Cedula de Identidad"
+                    placeholder="Cédula de Identidad"
                 />
                 <Text style={{fontSize: width(4.2), alignSelf: 'center', fontWeight: 'bold'}}>
                   Ingresa la cedula del titular de la cuenta 
@@ -105,7 +106,7 @@ class PagosScreen extends React.Component {
                   </Text>
                 </TouchableOpacity>
             </View>
-            <Footer/>
+            <Footer navigation={this.props.navigation} />
         </ImageBackground>
       </View>
     );

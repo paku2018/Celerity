@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 class LinkButton extends React.Component {
     render() {
         return (
-            <TouchableOpacity activeOpacity={.7} style={styles.btn} onPress={this.props.pageNavi}>
+            <TouchableOpacity activeOpacity={.7} style={styles.btn} onPress={this.props.changeView}>
                 <View
                     style={{
                         justifyContent: 'space-between',
@@ -38,7 +38,8 @@ class LinkButton extends React.Component {
                         borderWidth: width(0.2),
                         height: height(6.5),
                         borderRadius: 10,
-                        paddingTop: height(0.8),
+                        alignItems: 'center',
+                        // paddingTop: height(0.8),
                         paddingRight: width(0.5),
                         paddingLeft: width(2.5),
                     }}
@@ -46,12 +47,12 @@ class LinkButton extends React.Component {
                     <Text
                         style={{ 
                             width: width(60),
-                            paddingTop: height(0.5)
+                            // paddingTop: height(0.5)
                         }}
                     >
                         {this.props.text}
                     </Text>
-                    <AntDesign name="right" color={'green'} size={30}></AntDesign>
+                    <AntDesign name="right" color={'rgb(165, 198, 90)'} size={30}></AntDesign>
                 </View>
             </TouchableOpacity>
         );
@@ -98,11 +99,17 @@ render() {
                 </View>}
             />
             <View style={styles.content}>
-                <LinkButton text="Mira nuestros planes" />
-                <LinkButton text="Tu plan ideal" />
-                <LinkButton text="Cobertura" />
+                <LinkButton text="Mira nuestros planes" 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/planes/' })} 
+                />
+                <LinkButton text="Tu plan ideal" 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/asistente-casa-oficina/' })} 
+                />
+                <LinkButton text="Cobertura" 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/cobertura/' })} 
+                />
             </View>
-            <Footer/>
+            <Footer navigation={this.props.navigation} />
         </ImageBackground>
     </View>
     );

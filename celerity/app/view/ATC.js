@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     },
     btn: {
         width: width(80),
-        height: height(7.5),
+        height: height(7),
         alignSelf: 'center',
     }
 });
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 class LinkButton extends React.Component {
     render() {
         return (
-            <TouchableOpacity activeOpacity={.7} style={styles.btn} onPress={this.props.pageNavi}>
+            <TouchableOpacity activeOpacity={.7} style={styles.btn} onPress={this.props.changeView}>
                 <View
                     style={{
                         justifyContent: 'space-between',
@@ -39,7 +39,8 @@ class LinkButton extends React.Component {
                         borderWidth: width(0.2),
                         height: height(6.5),
                         borderRadius: 10,
-                        paddingTop: height(0.8),
+                        // paddingTop: height(0.8),
+                        alignItems: 'center',
                         paddingRight: width(0.5),
                         paddingLeft: width(2.5),
                     }}
@@ -48,19 +49,19 @@ class LinkButton extends React.Component {
                     <Text
                         style={{ 
                             width: width(60),
-                            paddingTop: height(0.5)
+                            // paddingTop: height(0.5)
                         }}
                     >
                         {this.props.text}
                     </Text>
-                    <AntDesign name="right" color={'green'} size={30}></AntDesign>
+                    <AntDesign name="right" color={'rgb(165, 198, 90)'} size={30}></AntDesign>
                 </View>
             </TouchableOpacity>
         );
     }
 }
 
-class ServicioScreen extends React.Component {
+class ATCScreen extends React.Component {
 render() {
     return (
     <View style={styles.container}>
@@ -80,7 +81,7 @@ render() {
                 }
                 center={
                 <View style={{height: height(10), flexDirection: 'column', marginTop: height(5)}}>
-                    <Text style={{fontSize: width(5), alignSelf: 'center', marginBottom: height(2)}}>Servicio tecnico</Text>
+                    <Text style={{fontSize: width(5), alignSelf: 'center', marginBottom: height(2)}}>ATC </Text>
                     <Image 
                         source={require('../assets/img/club/logo_2.png')} 
                         style={{
@@ -100,18 +101,36 @@ render() {
                 </View>}
             />
             <View style={styles.content}>
-                <LinkButton text="Tutoriales" />
-                <LinkButton text="Cambio de clave" />
-                <LinkButton text="Estado de atencion" />
+                <LinkButton text="Gestiona tu cuenta" 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/login_page/' })} 
+                />
+                <LinkButton text="Solicita traslado" 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/login_page_solicitud_traslado/' })} 
+                />
+                <LinkButton text="Aumenta velocidad" 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/login_page_upgrade_velocidad/' })} 
+                />
+                <LinkButton text="Contactanos" 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/oficinas/' })} 
+                />
+                <LinkButton text="Revisa valores pendientes" 
+                    // changeView={() => this.props.navigation.navigate("LinkPage", { url: '' })} 
+                />
+                <LinkButton text="Chat con asesor" 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/chat/chat_launch/' })} 
+                />
+                <LinkButton text="Otros servicios" 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/answers/detail/a_id/51/' })} 
+                />
             </View>
-            <Footer/>
+            <Footer navigation={this.props.navigation} />
         </ImageBackground>
     </View>
     );
 }
 }
 
-export default ServicioScreen;
+export default ATCScreen;
 
 
 

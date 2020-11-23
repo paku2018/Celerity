@@ -116,7 +116,7 @@ class MainClubScreen extends React.Component {
                     </Text>
                 </TouchableOpacity>
                 </View>
-                <Footer/>
+                <Footer navigation={this.props.navigation} />
             </ImageBackground>
         </View>
         );
