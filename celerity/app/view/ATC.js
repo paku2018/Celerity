@@ -72,7 +72,8 @@ render() {
                 left={
                 <TouchableOpacity onPress={ () => this.props.navigation.goBack(null) }>
                     <View style={{
-                        flexDirection: 'row'
+                        flexDirection: 'row',
+                        alignItems: 'center',
                     }}>
                         <AntDesign name="left" color={'black'} size={20}></AntDesign>
                         <Text style={{fontSize: width(4), width: width(13), color: 'lightgray'}}>Volver</Text>

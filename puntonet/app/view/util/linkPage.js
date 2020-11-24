@@ -21,13 +21,18 @@ class LinkPageScreen extends React.Component {
             title: this.props.route.params.title,
         };
         var linkURL = this.state.url;
+        const webViewRef = React.createRef(null);
+  
+        const goback = () => {
+            webViewRef.current.goBack();
+        };
         return (
             <View style={styles.container}>
                 <HeaderLink
                     image={false}
                     imageSource={{}}
                     left={
-                    <TouchableOpacity onPress={ () => this.props.navigation.goBack(null) }>
+                    <TouchableOpacity onPress={ goback }>
                         <View style={{
                             flexDirection: 'row',
                             alignItems: 'center',
@@ -51,7 +56,7 @@ class LinkPageScreen extends React.Component {
                 />
                 <WebView
                     source={{uri: linkURL}}
-                    style={{marginTop: height(15), marginBottom: height(14)}}
+                    style={{marginTop: height(12), marginBottom: height(11)}}
                 />
                 <Footer navigation={this.props.navigation} />
             </View>
