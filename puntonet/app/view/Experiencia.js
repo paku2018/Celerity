@@ -89,7 +89,7 @@ render() {
                     <Image 
                         source={require('../assets/img/logo.png')} 
                         style={{
-                            width: width(50),
+                            width: width(40),
                             alignSelf: 'center',
                             height: height(7),
                             resizeMode: 'stretch'
