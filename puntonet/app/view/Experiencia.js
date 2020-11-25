@@ -44,6 +44,7 @@ class LinkButton extends React.Component {
                         alignItems: 'center',
                         paddingRight: width(0.5),
                         paddingLeft: width(2.5),
+                        backgroundColor: 'rgba(0,0,0,0.15)',
                     }}
                 >
                     <Text
@@ -113,6 +114,7 @@ render() {
                 />
                 <LinkButton text="Sala de prensa" 
                     pageNavi={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.puntonet.ec/noticias/', title: 'Sala de prensa ' })}
+                    navigation={this.props.navigation}
                 />
                 <LinkButton text="CRIST" 
                     pageNavi={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.puntonet.ec/csirt/', title: 'CRIST ' })}

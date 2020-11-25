@@ -101,13 +101,13 @@ render() {
             />
             <View style={styles.content}>
                 <LinkButton text="Mira nuestros planes" 
-                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/planes/' })} 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/planes/', title: 'Mira nuestros planes ' })} 
                 />
                 <LinkButton text="Tu plan ideal" 
-                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/asistente-casa-oficina/' })} 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/asistente-casa-oficina/', title: 'Tu plan ideal ' })} 
                 />
                 <LinkButton text="Cobertura" 
-                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/cobertura/' })} 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/cobertura/', title: 'Cobertura ' })} 
                 />
             </View>
             <Footer navigation={this.props.navigation} />

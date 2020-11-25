@@ -13,7 +13,6 @@ import Header from './app/view/util/header';
 import HeaderLink from './app/view/util/header_link';
 import Footer from './app/view/util/footer';
 import LinkPageScreen from './app/view/util/linkPage';
-import LinkViewScreen from './app/view/util/linkView';
 
 const Stack = createStackNavigator();
 
@@ -36,7 +35,6 @@ class App extends React.Component {
           <Stack.Screen name="HeaderLink" component={HeaderLink} />
           <Stack.Screen name="Footer" component={Footer} />
           <Stack.Screen name="LinkPage" component={LinkPageScreen} />
-          <Stack.Screen name="LinkView" component={LinkViewScreen} />
         </Stack.Navigator>          
       </NavigationContainer>
     );

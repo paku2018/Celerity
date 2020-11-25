@@ -109,7 +109,7 @@ class CategoryClubScreen extends React.Component {
             />
                 <View style={styles.content}>
                     <LinkButton text="Conoce nuestro club" 
-                        changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/clubcelerity/' })} 
+                        changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/clubcelerity/', title: 'Conoce nuestro club ' })} 
                     />
                     <LinkButton text="Consulta tus puntos" 
                         changeView={() => this.props.navigation.navigate('ClubLogin')} 
@@ -118,10 +118,6 @@ class CategoryClubScreen extends React.Component {
                     <LinkButton text="Tarjeta virtual Celerity" />
                     <LinkButton text="Canjea tus premios" />
                     <LinkButton text="Accede a tus beneficios" />
-                    {/* <WebView 
-                        source={{html: '<iframe width="100%" height="50%" src="https://www.youtube.com/embed/cqyziA30whE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'}}
-                        style={{marginTop: 20}}
-                    /> */}
                 </View>
                 <Footer navigation={this.props.navigation} />
             </ImageBackground>

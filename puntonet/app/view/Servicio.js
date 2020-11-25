@@ -44,6 +44,7 @@ class LinkButton extends React.Component {
                         alignItems: 'center',
                         paddingRight: width(0.5),
                         paddingLeft: width(2.5),
+                        backgroundColor: 'rgba(0,0,0,0.15)',
                     }}
                 >
                     <Text

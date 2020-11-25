@@ -103,25 +103,25 @@ render() {
             />
             <View style={styles.content}>
                 <LinkButton text="Gestiona tu cuenta" 
-                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/login_page/' })} 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/login_page/', title: 'Gestiona tu cuenta ' })} 
                 />
                 <LinkButton text="Solicita traslado" 
-                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/login_page_solicitud_traslado/' })} 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/login_page_solicitud_traslado/', title: 'Solicita traslado ' })} 
                 />
                 <LinkButton text="Aumenta velocidad" 
-                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/login_page_upgrade_velocidad/' })} 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/login_page_upgrade_velocidad/', title: 'Aumenta velocidad ' })} 
                 />
                 <LinkButton text="Contactanos" 
-                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/oficinas/' })} 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://www.celerity.ec/oficinas/', title: 'Contactanos ' })} 
                 />
                 <LinkButton text="Revisa valores pendientes" 
                     // changeView={() => this.props.navigation.navigate("LinkPage", { url: '' })} 
                 />
                 <LinkButton text="Chat con asesor" 
-                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/chat/chat_launch/' })} 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/chat/chat_launch/', title: 'Chat con asesor ' })} 
                 />
                 <LinkButton text="Otros servicios" 
-                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/answers/detail/a_id/51/' })} 
+                    changeView={() => this.props.navigation.navigate("LinkPage", { url: 'https://puntonet.custhelp.com/app/answers/detail/a_id/51/', title: 'Otros servicios ' })} 
                 />
             </View>
             <Footer navigation={this.props.navigation} />

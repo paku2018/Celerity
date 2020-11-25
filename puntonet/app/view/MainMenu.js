@@ -30,7 +30,7 @@ class LinkButton extends React.Component {
                         justifyContent: 'space-between',
                         flexDirection: 'row',
                         borderColor: 'red',
-                        borderWidth: width(0.5),
+                        borderWidth: width(0.2),
                         height: height(8.5),
                         borderRadius: 10,
                         alignItems: 'center',
