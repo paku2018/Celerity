@@ -16,12 +16,12 @@ const styles = StyleSheet.create({
     logoImg: {
         alignSelf: 'center',
         width: width(50),
-        height: height(7),
+        height: width(13.9),
         resizeMode: 'stretch',
     },
     buttons: {
-        marginLeft: width(22),
-        marginRight: width(22),
+        marginLeft: width(19),
+        marginRight: width(19),
         flexDirection: "row",
         justifyContent: "space-between",
     },
@@ -35,16 +35,16 @@ const styles = StyleSheet.create({
         },
         backgroundColor: 'white',
         borderColor: 'gray',
-        borderRadius: 15,
-        width: width(23),
-        height: height(13),
+        borderRadius: 20,
+        width: width(24),
+        height: width(23),
         marginTop: height(3),
         flexDirection: 'column',
     },
     btnLogo: {
         alignSelf: 'center',
-        width: width(15),
-        height: height(7),
+        width: width(13),
+        height: width(11.36),
         resizeMode: 'stretch',
         marginBottom: height(1),
         marginTop: height(1)
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     bgImg: {
         alignSelf: 'center',
         width: width(100),
-        height: height(32),
+        height: width(68.9),
         bottom: 0,
         resizeMode: 'stretch',
     }

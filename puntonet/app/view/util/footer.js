@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         backgroundColor: 'white',
-        paddingRight: width(8),
-        paddingLeft: width(8),
+        paddingRight: width(16),
+        paddingLeft: width(16),
         paddingTop: height(2),
         shadowColor: '#000',
         shadowOffset: { width: 0, height: -3 },
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     btnImg: {
         resizeMode: 'stretch',
         width: width(7),
-        height: height(4),
+        height: width(7),
         flexDirection: 'column',
         alignSelf: 'center'
     }

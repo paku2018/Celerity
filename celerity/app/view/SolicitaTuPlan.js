@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         width: width(80),
         height: height(7.5),
         alignSelf: 'center',
+        marginBottom: height(3),
     }
 });
 
@@ -39,7 +40,6 @@ class LinkButton extends React.Component {
                         height: height(6.5),
                         borderRadius: 10,
                         alignItems: 'center',
-                        // paddingTop: height(0.8),
                         paddingRight: width(0.5),
                         paddingLeft: width(2.5),
                     }}
@@ -73,7 +73,7 @@ render() {
                         flexDirection: 'row',
                         alignItems: 'center',
                     }}>
-                        <AntDesign name="left" color={'black'} size={20}></AntDesign>
+                        <AntDesign name="left" color={'rgb(165, 198, 90)'} size={20}></AntDesign>
                         <Text style={{fontSize: width(4), width: width(13), color: 'lightgray'}}>Volver</Text>
                     </View>
                 </TouchableOpacity>

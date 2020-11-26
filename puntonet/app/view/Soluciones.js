@@ -85,20 +85,20 @@ render() {
                         flexDirection: 'row',
                         alignItems: 'center',
                     }}>
-                        <AntDesign name="left" color={'red'} size={20}></AntDesign>
+                        <AntDesign name="left" color={'rgb(210, 5, 5)'} size={20}></AntDesign>
                         <Text style={{fontSize: width(4), width: width(13), color: 'lightgray'}}>Volver</Text>
                     </View>
                 </TouchableOpacity>
                 }
                 center={
                 <View style={{height: height(10), flexDirection: 'column', marginTop: height(5)}}>
-                    <Text style={{fontSize: width(5), alignSelf: 'center', marginBottom: height(2)}}>Soliuciones tecnonogicas</Text>
+                    <Text style={{fontSize: width(5), alignSelf: 'center', marginBottom: height(2)}}>Soluciones Tecnológicas</Text>
                     <Image 
                         source={require('../assets/img/logo.png')} 
                         style={{
                             width: width(40),
                             alignSelf: 'center',
-                            height: height(7),
+                            height: width(11.8),
                             resizeMode: 'stretch'
                         }}
                     />

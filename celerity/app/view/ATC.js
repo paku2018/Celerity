@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
         width: width(80),
         height: height(7),
         alignSelf: 'center',
+        marginBottom: height(1),
     }
 });
 
@@ -75,7 +76,7 @@ render() {
                         flexDirection: 'row',
                         alignItems: 'center',
                     }}>
-                        <AntDesign name="left" color={'black'} size={20}></AntDesign>
+                        <AntDesign name="left" color={'rgb(165, 198, 90)'} size={20}></AntDesign>
                         <Text style={{fontSize: width(4), width: width(13), color: 'lightgray'}}>Volver</Text>
                     </View>
                 </TouchableOpacity>

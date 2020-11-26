@@ -37,7 +37,7 @@ class LinkPageScreen extends React.Component {
                             flexDirection: 'row',
                             alignItems: 'center',
                         }}>
-                            <AntDesign name="left" color={'red'} size={20}></AntDesign>
+                            <AntDesign name="left" color={'rgb(210, 5, 5)'} size={20}></AntDesign>
                             <Text style={{fontSize: width(4), width: width(13), color: 'lightgray'}}>Volver</Text>
                         </View>
                     </TouchableOpacity>
