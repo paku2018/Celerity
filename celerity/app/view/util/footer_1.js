@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     btnImg: {
         resizeMode: 'stretch',
         width: width(7),
-        height: height(4),
+        height: width(7),
         flexDirection: 'column',
         alignSelf: 'center'
     }
